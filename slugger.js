@@ -5,24 +5,12 @@ var whitespace = /\s+/g,
     nonAscii = /[^A-Za-z0-9_ \-]/g;
 
 function slugger(string, opts) {
-    var options = {
-            replacement: '-',
-            maintainCase: false
-        },
+    var maintainCase = opts && opts.maintainCase || false,
+        replacement = opts && opts.replacement || '-',
         key;
-
     if (typeof string !== 'string') return '';
-    if (typeof opts === 'object') {
-        for (key in opts) {
-            options[key] = opts[key];
-        }
-    }
-
-    if (!options.maintainCase) {
-        string = string.toLowerCase();
-    }
-
-    return string.replace(nonAscii, '').replace(whitespace, options.replacement);
+    if (!maintainCase) string = string.toLowerCase();
+    return string.replace(nonAscii, '').replace(whitespace, replacement);
 };
 
 if (typeof module !== 'undefined') {
