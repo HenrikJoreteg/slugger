@@ -14,6 +14,10 @@ slugger('Hello yOu CRAZY Swede!', {maintainCase: true}); // returns 'Hello-yOu-C
 
 // optionally use a different replacement character
 slugger('Hello yOu CRAZY Swede!', {replacement: '_'}); // returns 'hello_you_crazy_swede'
+
+// optionally trim to max length while not breaking any words
+slugger('Hello yOu CRAZY Swede!', {smartTrim: 9}); // returns 'hello-you'
+
 ```
 
 That's all there is to it!
