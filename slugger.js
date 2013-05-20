@@ -7,11 +7,19 @@ var whitespace = /\s+/g,
 function slugger(string, opts) {
     var maintainCase = opts && opts.maintainCase || false,
         replacement = opts && opts.replacement || '-',
-        key;
+        smartTrim = opts && opts.smartTrim,
+        result,
+        lucky;
     if (typeof string !== 'string') return '';
     if (!maintainCase) string = string.toLowerCase();
-    return string.replace(nonAscii, '').replace(whitespace, replacement);
-};
+    result = string.replace(nonAscii, '').replace(whitespace, replacement);
+    if (smartTrim && result.length > smartTrim) {
+        lucky = result.charAt(smartTrim) === replacement;
+        result = result.slice(0, smartTrim);
+        if (!lucky) result = result.slice(0, result.lastIndexOf(replacement));
+    }
+    return result;
+}
 
 if (typeof module !== 'undefined') {
     module.exports = slugger;
