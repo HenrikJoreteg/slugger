@@ -9,5 +9,6 @@
   "tags": ["slugify", "url", "browser"],
   "scripts": {
     "test": "node test.js"
-  }
+  },
+  "main": "slugger"
 }
