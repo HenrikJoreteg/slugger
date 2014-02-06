@@ -18,6 +18,11 @@ slugger('Hello yOu CRAZY Swede!', {replacement: '_'}); // returns 'hello_you_cra
 // optionally trim to max length while not breaking any words
 slugger('Hello yOu CRAZY Swede!', {smartTrim: 9}); // returns 'hello-you'
 
+// optionally allow additional characters
+// just pass string of characters that would normally be removed
+// that you want to allow.
+slugger('Hello yOu CRAZY Swede!', {alsoAllow: "!&"}); // returns 'hello-you'
+
 ```
 
 That's all there is to it!
@@ -38,7 +43,11 @@ Because I wanted something simpler that didn't try to do anything with special c
 
 ## Tests? 
 
-yup.
+Just run `npm test`
+
+## Changelog
+
+- 0.1.0 - Adding option to allow other characters
 
 ## Dig it?
 

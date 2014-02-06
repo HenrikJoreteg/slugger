@@ -1,14 +1,27 @@
 {
   "name": "slugger",
-  "version": "0.0.3",
+  "description": "Takes a string, returns a url friendly string. Works in browser and node. Dead simple.",
+  "version": "0.1.0",
+  "author": "Henrik Joreteg <henrik@andyet.net>",
+  "bugs": "https://github.com/henrikjoreteg/slugger/issues",
+  "homepage": "https://github.com/henrikjoreteg/slugger",
+  "keywords": [
+    "utils",
+    "browser",
+    "url"
+  ],
+  "license": "MIT",
+  "main": "./slugger.js",
   "repository": {
-    "type": "git", 
+    "type": "git",
     "url": "git@github.com:henrikjoreteg/slugger.git"
   },
-  "description": "Takes a string, returns a url friendly string. Works in browser and node. Dead simple.",
-  "tags": ["slugify", "url", "browser"],
   "scripts": {
     "test": "node test.js"
   },
-  "main": "./slugger.js"
+  "tags": [
+    "slugify",
+    "url",
+    "browser"
+  ]
 }
