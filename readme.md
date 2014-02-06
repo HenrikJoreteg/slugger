@@ -21,7 +21,7 @@ slugger('Hello yOu CRAZY Swede!', {smartTrim: 9}); // returns 'hello-you'
 // optionally allow additional characters
 // just pass string of characters that would normally be removed
 // that you want to allow.
-slugger('Hello yOu CRAZY Swede!', {alsoAllow: "!&"}); // returns 'hello-you'
+slugger('Hello yOu CRAZY Swede!', {alsoAllow: "!&"}); // returns 'hello-you-crazy-swede!'
 
 ```
 
