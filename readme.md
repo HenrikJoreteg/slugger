@@ -4,7 +4,7 @@ Dead simple slugification for node and browser.
 
 ## What it does:
 
-Converts any string into a url friendly veresion:
+Converts any string into a url friendly version:
 
 ```js
 slugger('Hello yOu CRAZY Swede!'); // returns 'hello-you-crazy-swede'
