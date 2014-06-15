@@ -1,7 +1,7 @@
 {
   "name": "slugger",
   "description": "Takes a string, returns a url friendly string. Works in browser and node. Dead simple.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Henrik Joreteg <henrik@andyet.net>",
   "bugs": "https://github.com/henrikjoreteg/slugger/issues",
   "homepage": "https://github.com/henrikjoreteg/slugger",
