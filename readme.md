@@ -23,10 +23,10 @@ slugger('Hello yOu CRAZY Swede!', {smartTrim: 9}); // returns 'hello-you'
 // that you want to allow.
 slugger('Hello yOu CRAZY Swede!', {alsoAllow: "!&"}); // returns 'hello-you-crazy-swede!'
 
-// decodes URI components by default, if you don't want that pass {decode: true};
+// decodes URI components by default, so {decode: true} is not required
 slugger('boo%20boo') // returns 'boo-boo';
-// now with decode
-slugger('boo%20boo') // returns boo20boo;
+// now without decode
+slugger('boo%20boo', {decode: false}) // returns boo20boo;
 
 ```
 
